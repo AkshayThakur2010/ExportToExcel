@@ -1,0 +1,40 @@
+<br>
+&nbsp;&nbsp;<p-button label="Change Language" (click)="changeLanguage()"></p-button><br><br>
+<h1>Current Language : <label translate>Language</label></h1><br>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-auto"> </div>
+        <div class="col-12">
+            <p-table #StudentListTable [value]="employeeList" [columns]="tableColumn">
+                <ng-template pTemplate="caption">
+                    <div class="text-right">
+                        <button type="button" class="btn btn-danger btn_margin" (click)="exportToExcel()" translate>
+                            ExportAsExcel</button>
+                        <button type="button" class="btn btn-danger" (click)="exportToExcel(false)"
+                            translate>ExportAsCsv</button>
+                    </div>
+                </ng-template>
+                <ng-template pTemplate="header" let-columns>
+                    <tr>
+                        <th *ngFor="let col of columns" [pSortableColumn]="col.field" pResizableColumn>
+                            <div>
+                                {{col.header | translate}}
+                            </div>
+                        </th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-emp let-columns="columns">
+                    <tr>
+                        <td *ngFor="let col of columns">
+                            <div>
+                                {{emp[col.field]}}
+                            </div>
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+        <div class="col-auto"> </div>
+    </div>
+</div>

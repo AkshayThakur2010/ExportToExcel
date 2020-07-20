@@ -1,0 +1,9 @@
+{
+    "Language": "Portuguese",
+    "EMP_NAME": "Nome",
+    "EMP_ID": "ID do Empregado",
+    "EMP_WORKDEPT": "Departamento",
+    "EMP_MANAGER": "Gerente",
+    "ExportAsExcel": "EXPORTAÇÃO COMO EXCEL",
+    "ExportAsCsv": "EXPORTAR COMO CSV"
+}
